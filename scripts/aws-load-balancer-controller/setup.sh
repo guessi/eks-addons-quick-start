@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 AWS_REGION="us-east-1"
-EKS_CLUSTER_NAME="eks-demo"
+EKS_CLUSTER_NAME="eks-v121"
 POLICY_NAME="AWSLoadBalancerControllerIAMPolicy"
 SERVICE_ACCOUNT_NAME="aws-load-balancer-controller"
 
@@ -25,8 +25,8 @@ SERVICE_ACCOUNT_NAME="aws-load-balancer-controller"
 #
 # ref: https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.4/deploy/installation/#kubernetes-version-requirements
 
-APP_VERSION="v2.4.5"
-CHART_VERSION="1.4.6"
+APP_VERSION="v2.3.0"
+CHART_VERSION="1.3.2"
 
 echo "[debug] detecting AWS Account ID"
 export AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
